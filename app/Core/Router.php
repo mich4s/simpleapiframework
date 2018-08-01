@@ -111,6 +111,7 @@ class Router
 
     protected function executeResponse(array $middlewareList, array $routeParams): Response
     {
+        //TODO controllers and middleware unified response, so can be used in one interface and loop
         foreach ($middlewareList[1] as $middleware)
         {
             $className = "App\\Middleware\\".$middleware."Middleware";
